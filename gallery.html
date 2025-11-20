@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ABC Fitness Studio – Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-gallery">
+  <header>
+    <nav class="main-nav">
+      <div class="logo">ABC Fitness Studio</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="custom.html" class="nav-link">Custom Program</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Studio Gallery</h1>
+    <p>Explore our space, classes, and members in action.</p>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Group+Class" alt="Group fitness class in session" />
+        <figcaption>High-energy group class</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Weights+Area" alt="Weights and strength training area" />
+        <figcaption>Fully equipped weight area</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Yoga+Studio" alt="Yoga studio space" />
+        <figcaption>Peaceful yoga studio</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Cardio+Zone" alt="Cardio machines in the studio" />
+        <figcaption>Cardio zone</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Trainer+Support" alt="Trainer supporting a member" />
+        <figcaption>One-on-one guidance</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://via.placeholder.com/400x250?text=Stretching" alt="Members stretching after class" />
+        <figcaption>Cool-down and stretching</figcaption>
+      </figure>
+    </div>
+
+    <section class="section">
+      <h2>ABC Fitness Essentials</h2>
+      <p>Add studio merchandise to your cart.</p>
+      <div class="card-grid">
+        <article class="card">
+          <h3>ABC Fitness Water Bottle</h3>
+          <p class="price">$12</p>
+          <button class="btn btn-secondary add-to-cart"
+                  data-name="ABC Fitness Water Bottle"
+                  data-price="12">
+            Add to Cart
+          </button>
+        </article>
+        <article class="card">
+          <h3>ABC Fitness T-Shirt</h3>
+          <p class="price">$18</p>
+          <button class="btn btn-secondary add-to-cart"
+                  data-name="ABC Fitness T-Shirt"
+                  data-price="18">
+            Add to Cart
+          </button>
+        </article>
+        <article class="card">
+          <h3>Yoga Mat</h3>
+          <p class="price">$25</p>
+          <button class="btn btn-secondary add-to-cart"
+                  data-name="ABC Fitness Yoga Mat"
+                  data-price="25">
+            Add to Cart
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> ABC Fitness Studio. All rights reserved.</p>
+      <button id="viewCartBtn" class="btn btn-outline">View Cart</button>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+      <h2 id="cartTitle">Shopping Cart</h2>
+      <div id="cartItemsContainer"></div>
+      <p id="cartTotal"></p>
+    </div>
+  </div>
+</body>
+</html>

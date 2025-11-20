@@ -1,0 +1,409 @@
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3 {
+  color: #0b1f3b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+/* Navigation */
+.main-nav {
+  background-color: #0b1f3b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Hero */
+.hero {
+  background-image: url("https://via.placeholder.com/1400x500?text=ABC+Fitness+Studio");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: left;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  background: rgba(11, 31, 59, 0.8);
+  padding: 2rem;
+  max-width: 600px;
+  margin-left: 5%;
+}
+
+.hero h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #8bc34a;
+  color: #0b1f3b;
+}
+
+.btn-primary:hover {
+  background-color: #7ab13f;
+}
+
+.btn-secondary {
+  background-color: #ff9800;
+  color: #0b1f3b;
+}
+
+.btn-secondary:hover {
+  background-color: #f57c00;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #0b1f3b;
+}
+
+/* Cards and grids */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.price {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* Benefits */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.benefit {
+  background-color: #f5f7fb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  background-color: #ffffff;
+  border-left: 4px solid #8bc34a;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.testimonials cite {
+  display: block;
+  font-style: normal;
+  margin-top: 0.5rem;
+}
+
+/* Forms */
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.inline-form input[type="email"] {
+  flex: 1 1 200px;
+  padding: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #cccccc;
+}
+
+.stacked-form .form-row {
+  margin-bottom: 1rem;
+}
+
+.stacked-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.stacked-form input,
+.stacked-form select,
+.stacked-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+  font: inherit;
+}
+
+.form-message {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-item figcaption {
+  padding: 0.75rem 1rem;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+th {
+  background-color: #0b1f3b;
+  color: #ffffff;
+}
+
+/* Feedback list */
+.feedback-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom layout */
+.custom-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.custom-summary {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Footer */
+footer {
+  background-color: #0b1f3b;
+  color: #ffffff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background-color: #0b1f3b;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 260px;
+  }
+
+  .hero-content {
+    margin: 1rem;
+  }
+
+  .inline-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .custom-layout {
+    grid-template-columns: 1fr;
+  }
+}

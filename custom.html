@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ABC Fitness Studio – Custom Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-custom">
+  <header>
+    <nav class="main-nav">
+      <div class="logo">ABC Fitness Studio</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="custom.html" class="nav-link active">Custom Program</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Build Your Custom Workout Program</h1>
+    <p>Create a personalized program based on your goals, schedule, and preferences.</p>
+
+    <div class="custom-layout">
+      <form id="customProgramForm" class="stacked-form">
+        <div class="form-row">
+          <label for="goal">Primary Fitness Goal</label>
+          <select id="goal" name="goal">
+            <option value="Weight Loss">Weight Loss</option>
+            <option value="Muscle Gain">Muscle Gain</option>
+            <option value="General Fitness">General Fitness</option>
+            <option value="Stress Relief">Stress Relief</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="daysPerWeek">Days per Week</label>
+          <input type="number" id="daysPerWeek" name="daysPerWeek" min="1" max="7" value="3" />
+        </div>
+        <div class="form-row">
+          <label for="intensity">Preferred Intensity</label>
+          <select id="intensity" name="intensity">
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="preferences">Notes or Preferences</label>
+          <textarea id="preferences" name="preferences" rows="4"
+                    placeholder="List any injuries, preferred class times, or favorite formats."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Program</button>
+        <p id="customProgramMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <aside class="custom-summary" aria-label="Custom program summary">
+        <h2>Your Program Summary</h2>
+        <div id="programSummary">
+          <p>Submit the form to see your personalized plan.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> ABC Fitness Studio. All rights reserved.</p>
+      <button id="viewCartBtn" class="btn btn-outline">View Cart</button>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+      <h2 id="cartTitle">Shopping Cart</h2>
+      <div id="cartItemsContainer"></div>
+      <p id="cartTotal"></p>
+    </div>
+  </div>
+</body>
+</html>

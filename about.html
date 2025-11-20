@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ABC Fitness Studio – About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-about">
+  <header>
+    <nav class="main-nav">
+      <div class="logo">ABC Fitness Studio</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="custom.html" class="nav-link">Custom Program</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>About ABC Fitness Studio</h1>
+    <p>
+      ABC Fitness Studio is dedicated to helping members of all fitness levels
+      build strength, improve endurance, and feel more confident.
+    </p>
+
+    <section class="section">
+      <h2>Our Trainers</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Alex – Strength Coach</h3>
+          <p>Specializes in strength training and functional fitness.</p>
+        </article>
+        <article class="card">
+          <h3>Mia – Yoga Instructor</h3>
+          <p>Focuses on flexibility, breathwork, and recovery.</p>
+        </article>
+        <article class="card">
+          <h3>Cameron – Cardio Specialist</h3>
+          <p>Designs high-energy classes that improve heart health.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Class Schedule</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>6:00 PM</td>
+              <td>Strength Training</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>7:00 PM</td>
+              <td>Yoga Flow</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>6:30 PM</td>
+              <td>Cardio Blast</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>7:00 PM</td>
+              <td>Strength Training</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>9:00 AM</td>
+              <td>Weekend Circuit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="stacked-form" novalidate>
+        <div class="form-row">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="email" required />
+        </div>
+        <div class="form-row">
+          <label for="contactInterest">Interest</label>
+          <select id="contactInterest" name="interest">
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Personal Training">Personal Training</option>
+            <option value="Group Classes">Group Classes</option>
+            <option value="Nutrition Coaching">Nutrition Coaching</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p id="contactMessageStatus" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Customer Feedback</h2>
+      <form id="feedbackForm" class="stacked-form" novalidate>
+        <div class="form-row">
+          <label for="feedbackName">Name</label>
+          <input type="text" id="feedbackName" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="feedbackRating">Rating</label>
+          <select id="feedbackRating" name="rating">
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="feedbackComments">Comments</label>
+          <textarea id="feedbackComments" name="comments" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit Feedback</button>
+      </form>
+
+      <div class="feedback-list" id="feedbackList" aria-live="polite">
+        <!-- JS will insert feedback cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> ABC Fitness Studio. All rights reserved.</p>
+      <button id="viewCartBtn" class="btn btn-outline">View Cart</button>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+      <h2 id="cartTitle">Shopping Cart</h2>
+      <div id="cartItemsContainer"></div>
+      <p id="cartTotal"></p>
+    </div>
+  </div>
+</body>
+</html>
